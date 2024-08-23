@@ -1,0 +1,2162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from demo.egenslab.com/html/tourxpro/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Aug 2024 09:09:08 GMT -->
+
+  <head>
+    <title>paryatak.club</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="assets/images/favicon.png"
+      type="image/gif"
+      sizes="20x20"
+    />
+
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
+
+    <link href="assets/css/boxicons.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <style>
+      /* For desktop view */
+      .logo {
+        width: 600px;
+        /* Set a larger width for the logo */
+        height: auto;
+        /* Maintain aspect ratio */
+        max-width: 100%;
+      }
+
+      /* For mobile view */
+      @media only screen and (max-width: 600px) {
+        .logo {
+          width: 300px;
+          /* Adjust this value for mobile view */
+          height: auto;
+          /* Maintain aspect ratio */
+        }
+      }
+
+      /* Social media icons */ /* Container for icons */
+      .icon-container {
+        position: fixed;
+        z-index: 1000;
+        bottom: 50px;
+        right: 10px; /* border:2px solid red; */
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .icon-container .icon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: transparent;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+        transition: transform 0.3s ease-in-out;
+      }
+      .icon-container .icon:hover {
+        transform: scale(1.1); /* Zoom effect on hover */
+      }
+      .icon-container .icon img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      } /* container for icons */
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class="preloader">
+<div class="loader">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div> -->
+
+    <div class="main-searchbar-wrapper">
+      <div class="container">
+        <div class="multi-main-searchber">
+          <div class="main-searchbar-close search-toggle">
+            <i class="bi bi-x-lg"></i>
+          </div>
+          <form action="#" method="post" id="main_searchbar">
+            <div class="row g-4">
+              <div class="col-lg-10">
+                <div class="row gx-0 gy-4">
+                  <div class="col-lg-3 col-md-6">
+                    <div class="search-box-single destination-box">
+                      <div class="searchbox-icon">
+                        <i class="bi bi-geo-alt"></i>
+                      </div>
+                      <div class="searchbox-input">
+                        <label for="deatination_drop">Destination</label>
+                        <select
+                          data-placeholder="Where Are You Going?"
+                          id="deatination_drop"
+                        >
+                          <option value>Where Are You Going?</option>
+                          <optgroup label="India">
+                            <option>Solt Lake</option>
+                            <option>Kolkata</option>
+                            <option>Mohamia</option>
+                            <option>Mumbai</option>
+                            <option>New Delhi</option>
+                          </optgroup>
+                          <optgroup label=" Bangladash">
+                            <option>Cox's Bazer</option>
+                            <option>Rangamati</option>
+                            <option>Banderban</option>
+                          </optgroup>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="search-box-single type-box">
+                      <div class="searchbox-icon">
+                        <i class="bi bi-text-paragraph"></i>
+                      </div>
+                      <div class="searchbox-input">
+                        <label for="activity-dropdown">Travel Type</label>
+                        <select
+                          class="defult-select-drowpown"
+                          data-placeholder="All Activity"
+                          id="activity-dropdown"
+                        >
+                          <option value>All Activity</option>
+                          <option value="1">Type 1</option>
+                          <option value="2">Type 2</option>
+                          <option value="3">Type 3</option>
+                          <option value="4">Type 4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="search-box-single type-box">
+                      <div class="searchbox-icon">
+                        <i class="bi bi-person-plus"></i>
+                      </div>
+                      <div class="searchbox-input">
+                        <label for="person-dropdown">Person</label>
+                        <select
+                          class="defult-select-drowpown"
+                          id="person-dropdown"
+                        >
+                          <option selected value="0">01</option>
+                          <option value="1">02</option>
+                          <option value="2">03</option>
+                          <option value="3">04</option>
+                          <option value="4">05</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="search-box-single date-box">
+                      <div class="searchbox-icon">
+                        <i class="bi bi-capslock"></i>
+                      </div>
+                      <div class="searchbox-input date-picker-input">
+                        <label for="datepicker">When</label>
+                        <input
+                          placeholder="Select your date"
+                          type="text"
+                          name="checkIn"
+                          id="datepicker"
+                          value
+                          class="calendar"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="main-form-submit">
+                  <button type="submit">Find Now</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="category-sidebar-wrapper">
+      <div class="category-sidebar">
+        <div
+          class="category-header d-flex justify-content-between align-items-center"
+        >
+          <h4>Category</h4>
+          <div class="category-toggle">
+            <i class="bi bi-x-lg"></i>
+          </div>
+        </div>
+        <div class="row row-cols-lg-3 row-cols-2 gy-5 mt-3">
+          <div class="col">
+            <a class="category-box" href="package.html">
+              <div class="cate-icon mx-auto">
+                <i class="fas fa-umbrella-beach" style="color: orange"></i>
+                <!-- Holiday Icon -->
+              </div>
+              <h5>Holiday</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a class="category-box" href="package.html">
+              <div class="cate-icon mx-auto">
+                <i class="fas fa-plane" style="color: orange"></i>
+                <!-- Flight Icon -->
+              </div>
+              <h5>Flight</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a class="category-box" href="package.html">
+              <div class="cate-icon mx-auto">
+                <i class="fas fa-hotel" style="color: orange"></i>
+                <!-- Hotel Icon -->
+              </div>
+              <h5>Hotel</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a class="category-box" href="package.html">
+              <div class="cate-icon mx-auto">
+                <i class="fas fa-ship" style="color: orange"></i>
+                <!-- Cruise Ship Icon -->
+              </div>
+              <h5>Cruise</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a class="category-box" href="package.html">
+              <div class="cate-icon mx-auto">
+                <i class="fas fa-train" style="color: orange"></i>
+                <!-- Train Icon -->
+              </div>
+              <h5>E-Railway Ticket</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a class="category-box" href="package.html">
+              <div class="cate-icon mx-auto">
+                <i class="fas fa-bus" style="color: orange"></i>
+                <!-- Bus Icon -->
+              </div>
+              <h5>Bus</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a class="category-box" href="package.html">
+              <div class="cate-icon mx-auto">
+                <i class="fas fa-car" style="color: orange"></i>
+                <!-- Car Icon -->
+              </div>
+              <h5>Car</h5>
+            </a>
+          </div>
+          <div class="col">
+            <a class="category-box" href="package.html">
+              <div class="cate-icon mx-auto">
+                <i class="fas fa-passport" style="color: orange"></i>
+                <!-- Passport Icon -->
+              </div>
+              <h5>Visa</h5>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="topbar-area topbar-style-one">
+<div class="container">
+<div class="row">
+<div class="col-xl-4 align-items-center d-xl-flex d-none">
+<div class="topbar-contact-left">
+<ul class="contact-list">
+<li><i class="bi bi-telephone-fill"></i> <a href="tel:+17632275032">+1 763-227-5032</a></li>
+<li><i class="bi bi-envelope-fill"></i> <a href="https://demo.egenslab.com/cdn-cgi/l/email-protection#d7beb9b1b897b2afb6baa7bbb2f9b4b8ba"><span class="__cf_email__" data-cfemail="ef86818980af8a978e829f838ac18c8082">[email&#160;protected]</span></a></li>
+</ul>
+</div>
+</div>
+<div class="col-xl-5 col-lg-6 col-md-6 text-xl-center text-md-start text-center">
+<div class="topbar-ad">
+<a href="#">Black Friday Big Offer</a>
+</div>
+</div>
+<div class="col-xl-3 col-lg-6 col-md-6 d-md-flex  d-none align-items-center justify-content-end">
+<ul class="topbar-social-links">
+<li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+<li><a href="#"><i class="bx bxl-instagram-alt"></i></a></li>
+<li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+<li><a href="#"><i class="bx bxl-whatsapp-square"></i></a></li>
+<li><a href="#"><i class="bx bxl-pinterest"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div> -->
+
+    <!-- Header started -->
+    <header>
+      <div class="header-area header-style-one">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12 align-items-center d-xl-flex d-lg-block"
+            >
+              <div
+                class="nav-logo d-flex justify-content-between align-items-center"
+              >
+                <a href="index.html"
+                  ><img
+                    src="assets/images/WhatsApp_Image_2024-08-10_at_1.38.43_PM-removebg-preview.png"
+                    alt="logo"
+                    class="logo"
+                /></a>
+                <div class="d-flex align-items-center gap-4">
+                  <div class="nav-right d-xl-none">
+                    <ul class="nav-actions">
+                      <li class="category-toggle">
+                        <i class="bx bx-category"></i>
+                      </li>
+                      <li class="search-toggle">
+                        <i class="bx bx-search-alt"></i>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mobile-menu d-flex">
+                    <a
+                      href="javascript:void(0)"
+                      class="hamburger d-block d-xl-none"
+                    >
+                      <span class="h-top"></span>
+                      <span class="h-middle"></span>
+                      <span class="h-bottom"></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-xs-6">
+              <nav class="main-nav float-end">
+                <div class="inner-logo d-xl-none text-center">
+                  <a href="#"
+                    ><img
+                      src="assets/images/WhatsApp_Image_2024-08-10_at_1.38.43_PM-removebg-preview.png"
+                      alt="logo"
+                      class="logo"
+                  /></a>
+                </div>
+                <ul>
+                  <li class="has-child-menu">
+                    <a href="index.html">Home</a>
+                    <!-- <i class="fl flaticon-plus">+</i> -->
+                    <!-- <ul class="sub-menu">
+<li><a href="index.html">Home Style 1</a></li>
+<li><a href="index2.html">Home Style 2</a></li>
+<li><a href="index3.html">Home Style 3</a></li>
+<li><a href="index4.html">Home Style 4</a></li>
+</ul> -->
+                  </li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li class="has-child-menu">
+                    <a href="destination.html">services</a>
+                    <!-- <i class="fl flaticon-plus">+</i> -->
+                    <!-- <ul class="sub-menu">
+<li><a href="destination.html">Destination</a></li>
+<li><a href="index.html">Destination Details</a></li>
+</ul> -->
+                  </li>
+                  <li class="has-child-menu">
+                    <a href="package.html">Travel plan</a>
+                    <!-- <i class="fl flaticon-plus">+</i> -->
+                    <!-- <ul class="sub-menu">
+<li><a href="package.html">Package Grid</a></li>
+<li><a href="package-sidebar.html">Package Sidebar</a></li>
+<li><a href="package-standard.html">Package Standard</a></li>
+<li><a href="package-details.html">Package Details </a></li>
+</ul> -->
+                  </li>
+                  <li class="has-child-menu">
+                    <a href="package-standard.html">Offers</a>
+                    <!-- <i class="fl flaticon-plus">+</i> -->
+                    <!-- <ul class="sub-menu">
+<li><a href="blog.html">Blog Grid</a></li>
+<li><a href="blog-sidebar.html">Blog Sidebar</a></li>
+<li><a href="blog-standard.html">Blog Standard </a></li>
+<li><a href="index.html">Blog Details</a></li>
+</ul> -->
+                  </li>
+                  <!-- <li class="has-child-menu">
+<a href="javascript:void(0)">Pages</a>
+<i class="fl flaticon-plus">+</i>
+<ul class="sub-menu">
+<li><a href="guide.html">Guide</a></li>
+<li><a href="gallary.html">Gallary</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="404.html">404</a></li>
+</ul>
+</li> -->
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="inner-contact-options d-xl-none">
+                  <div class="contact-box-inner" style="margin-left: -20px">
+                    <i class="bi bi-telephone-fill"></i>
+                    <a href="tel:+919555695021">+91 9555695021</a>
+                  </div>
+                  <div class="contact-box-inner">
+                    <i class="bi bi-envelope-fill"></i>
+                    <a
+                      href="mailto:bookingparyatak@gmail.com"
+                      style="margin-left: -20px"
+                      >bookingparyatak@gmail.com</a
+                    >
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div class="col-xl-2">
+              <div class="nav-right float-end d-xl-flex d-none">
+                <ul class="nav-actions">
+                  <li class="category-toggle">
+                    <i class="bx bx-category"></i>
+                  </li>
+                  <li class="search-toggle">
+                    <i class="bx bx-search-alt"></i>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Header ended -->
+    <div class="hero-area hero-style-one overflow-hidden">
+      <div class="container-fluid p-0">
+        <div class="swiper hero-slider-one">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="hero-single-slide">
+                <div class="hero-highlighted-bg">
+                  <img src="assets/images/banner/bg-highlight3.png" alt />
+                </div>
+                <div class="hero-content-bg">
+                  <div class="hero-content position-relative">
+                    <h2 class="hero-title">Travel & <span>Adventure</span></h2>
+                    <p>
+                      Embark on your next adventure with confidence! Whether
+                      you're seeking relaxation or excitement, our seamless
+                      planning process ensures a stress-free journey. Explore
+                      stunning destinations with guided tours that blend comfort
+                      and thrill.
+                    </p>
+                    <div class="hero-btns">
+                      <a href="package.html" class="button-fill-primary"
+                        >View Adventure</a
+                      >
+                      <a href="package.html" class="button-outlined-primary"
+                        >Take A Tour</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero-single-slide">
+                <div class="hero-highlighted-bg">
+                  <img src="assets/images/banner/bg-highlight2.png" alt />
+                </div>
+                <div class="hero-content-bg">
+                  <div class="hero-content position-relative">
+                    <h2 class="hero-title">Move The <span>Earth</span></h2>
+
+                    <p>
+                      Every traveler is unique, and so are our journeys. Whether
+                      you’re an adventure seeker, a history buff, or simply
+                      looking to unwind, we customize every detail to match your
+                      interests. Let us craft a personalized travel experience
+                      that reflects your passions and makes your journey truly
+                      yours.
+                    </p>
+
+                    <div class="hero-btns">
+                      <a href="package.html" class="button-fill-primary"
+                        >View Adventure</a
+                      >
+                      <a href="package.html" class="button-outlined-primary"
+                        >Take A Tour</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero-single-slide">
+                <div class="hero-highlighted-bg">
+                  <img src="assets/images/banner/bg-highlight1.png" alt />
+                </div>
+                <div class="hero-content-bg">
+                  <div class="hero-content position-relative">
+                    <h2 class="hero-title">Travel & <span>Adventure</span></h2>
+                    <p>
+                      Planning a trip shouldn’t be stressful. With our
+                      streamlined booking process and dedicated customer
+                      support, traveling has never been easier. From flights and
+                      accommodations to local guides and transportation, we’ve
+                      got everything covered. Just pack your bags and let us
+                      handle the rest!
+                    </p>
+                    <div class="hero-btns">
+                      <a href="package.html" class="button-fill-primary"
+                        >View Adventure</a
+                      >
+                      <a href="package.html" class="button-outlined-primary"
+                        >Take A Tour</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-arrows text-center d-lg-flex d-none">
+        <div
+          class="hero-prev"
+          tabindex="0"
+          role="button"
+          aria-label="Previous slide"
+        >
+          <i class="bi bi-arrow-left"></i> Prev
+        </div>
+        <div
+          class="hero-next"
+          tabindex="0"
+          role="button"
+          aria-label="Next slide"
+        >
+          Next <i class="bi bi-arrow-right"></i>
+        </div>
+      </div>
+      <div class="hero-pagination d-block w-auto"></div>
+    </div>
+
+    <div class="package-area package-style-one pt-110">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="section-head-alpha">
+              <h2>Explore Our Top Tour Packages</h2>
+              <p>
+                Discover your next adventure with our meticulously crafted tour
+                packages. We prioritize your safety and comfort, ensuring that
+                every aspect of your journey is seamless—from secure
+                accommodations to expertly guided tours. Travel with peace of
+                mind, knowing we're here to support you every step of the way.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="package-btn text-lg-end">
+              <a href="package.html" class="button-fill-primary"
+                >View All Tours</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Section -->
+        <!-- <div class="row mt-5">
+          <div class="col-12 text-center">
+            <div class="video-section">
+              <h3 style="font-weight: bold; color: #000">
+                Watch Our Travel Highlights
+              </h3>
+              <div class="video-container mt-4">
+                <video
+                  src="/assets/video/3554222-hd_1920_1080_24fps.mp4"
+                  autoplay
+                  muted
+                  loop
+                  style="width: 100%; height: auto"
+                ></video>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <h1
+          style="
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin: 40px;
+            color: #000"
+          "
+        >
+          Discover the Best Stays with Paryatak Club
+        </h1>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="package-card-alpha">
+              <div class="package-thumb">
+                <a href="package-details.html"
+                  ><img
+                    src="assets/images/hotels/hotel4.jpg"
+                    alt="Tour Package 1"
+                /></a>
+                <p class="card-label">
+                  <i class="bi bi-clock"></i> <span>2 Days & 1 Night</span>
+                </p>
+              </div>
+              <div class="package-card-body">
+                <h3 class="p-card-title">
+                  <a href="package-details.html"
+                    >Charming Getaway discover the Best of Nature</a
+                  >
+                </h3>
+                <div class="p-card-bottom">
+                  <div class="book-btn">
+                    <a href="package-details.html"
+                      >Book Now <i class="bx bxs-right-arrow-alt"></i
+                    ></a>
+                  </div>
+                  <div class="p-card-info">
+                    <span>From</span>
+                    <h6>3,000 INR <span>Per Person</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="package-card-alpha">
+              <div class="package-thumb">
+                <a href="package-details.html"
+                  ><img
+                    src="assets/images/hotels/g2.jpg"
+                    alt="Tour Package 2"
+                    height="240px"
+                /></a>
+                <p class="card-label">
+                  <i class="bi bi-clock"></i> <span>4 Days & 3 Nights</span>
+                </p>
+              </div>
+              <div class="package-card-body">
+                <h3 class="p-card-title">
+                  <a href="package-details.html"
+                    >Indulge in the luxury of exploring rich cultural
+                    heritage</a
+                  >
+                </h3>
+                <div class="p-card-bottom">
+                  <div class="book-btn">
+                    <a href="package-details.html"
+                      >Book Now <i class="bx bxs-right-arrow-alt"></i
+                    ></a>
+                  </div>
+                  <div class="p-card-info">
+                    <span>From</span>
+                    <h6>6,000 INR <span>Per Person</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="package-card-alpha">
+              <div class="package-thumb">
+                <a href="package-details.html"
+                  ><img
+                    src="assets/images/hotels/g4.jpg"
+                    alt="Tour Package 3"
+                    height="240px"
+                /></a>
+                <p class="card-label">
+                  <i class="bi bi-clock"></i> <span>8 Days & 7 Nights</span>
+                </p>
+              </div>
+              <div class="package-card-body">
+                <h3 class="p-card-title">
+                  <a href="package-details.html"
+                    >Luxury Retreat Indulge in Ultimate Relaxation</a
+                  >
+                </h3>
+                <div class="p-card-bottom">
+                  <div class="book-btn">
+                    <a href="package-details.html"
+                      >Book Now <i class="bx bxs-right-arrow-alt"></i
+                    ></a>
+                  </div>
+                  <div class="p-card-info">
+                    <span>From</span>
+                    <h6>9,000 INR <span>Per Person</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more packages as needed -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Package  -->
+    <!-- destination start -->
+    <div class="destination-area destination-style-one pt-110">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="section-head-alpha">
+              <h2>Explore Top Destination</h2>
+              <p>
+                Experience the charm of world-class locations. Journey through
+                vibrant cities and tranquil landscapes, where each destination
+                offers unique experiences and unforgettable memories.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div
+              class="slider-arrows text-center d-lg-flex d-none justify-content-end mb-3"
+            >
+              <div
+                class="testi-prev custom-swiper-prev"
+                tabindex="0"
+                role="button"
+                aria-label="Previous slide"
+              >
+                <i class="bi bi-chevron-left"></i>
+              </div>
+              <div
+                class="testi-next custom-swiper-next"
+                tabindex="0"
+                role="button"
+                aria-label="Next slide"
+              >
+                <i class="bi bi-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid p-0 overflow-hidden">
+        <div class="swiper destination-slider-one">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/indian pic/hawa-mahal-6156123_640.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Jaipur </a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>25</span> Place</div>
+                      <div class="hotel-count"><span>35</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/destination/istockphoto-671951258-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Delhi </a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>15</span> Place</div>
+                      <div class="hotel-count"><span>35</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/destination/istockphoto-509112518-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Agra</a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>22</span> Place</div>
+                      <div class="hotel-count"><span>05</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="#"
+                    ><img
+                      src="assets/images/indian pic/istockphoto-1164329797-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Varanasi</a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>17</span> Place</div>
+                      <div class="hotel-count"><span>20</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/indian pic/istockphoto-1055448614-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html"> Amritsar</a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>16</span> Place</div>
+                      <div class="hotel-count"><span>19</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/indian pic/istockphoto-181146020-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Hampi</a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>25</span> Place</div>
+                      <div class="hotel-count"><span>35</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/indian pic/istockphoto-2154433338-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Arunachal Pradesh</a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>25</span> Place</div>
+                      <div class="hotel-count"><span>35</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/indian pic/istockphoto-1031430214-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Kerala</a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>25</span> Place</div>
+                      <div class="hotel-count"><span>35</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/indian pic/istockphoto-543183018-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Sikkim</a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>25</span> Place</div>
+                      <div class="hotel-count"><span>35</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/indian pic/istockphoto-1224360439-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Goa</a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>25</span> Place</div>
+                      <div class="hotel-count"><span>35</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/indian pic/istockphoto-539018660-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Mumbai</a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>22</span> Place</div>
+                      <div class="hotel-count"><span>05</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/indian pic/istockphoto-949396238-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Assam</a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>26</span> Place</div>
+                      <div class="hotel-count"><span>08</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/indian pic/istockphoto-2161510610-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Jaisalmer</a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>22</span> Place</div>
+                      <div class="hotel-count"><span>05</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="destination-card-style-one">
+                <div class="d-card-thumb">
+                  <a href="index.html"
+                    ><img
+                      src="assets/images/indian pic/istockphoto-1212950691-612x612.jpg"
+                      alt
+                      height="195px"
+                  /></a>
+                </div>
+                <div class="d-card-overlay">
+                  <div class="d-card-content">
+                    <h3 class="d-card-title">
+                      <a href="index.html">Rishikesh</a>
+                    </h3>
+                    <div class="d-card-info">
+                      <div class="place-count"><span>22</span> Place</div>
+                      <div class="hotel-count"><span>15</span> Hotel</div>
+                    </div>
+                    <ul class="d-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- destination end -->
+
+    <!-- Newslatter satrt -->
+    <div class="newslatter-wrapper mt-120">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div
+              class="newslatter-side text-center text-lg-start mx-auto mx-lg-0"
+            >
+              <h2>Subscribe to Our <span>Newsletter</span></h2>
+              <p>
+                Join Paryatak Club to get the best travel deals, promotions, and
+                exclusive coupons.
+              </p>
+
+              <form action="contact.html" id="newslatter-form">
+                <div class="newslatter-form-input">
+                  <input
+                    type="email"
+                    name="newsletter"
+                    id="newslatter-input"
+                    placeholder="Enter your email..."
+                    required
+                  />
+                  <button type="submit" class="newslatter-submit">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="achievement-counter-side">
+              <div class="row g-4">
+                <div class="col-lg-6 col-md-6">
+                  <div class="achievement-box-style-one">
+                    <div class="achievement-icon">
+                      <img src="assets/images/icons/counter-icon2.svg" alt />
+                    </div>
+                    <div class="achievement-box-content">
+                      <h2>500+</h2>
+                      <h4>Awesome Tours</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="achievement-box-style-one">
+                    <div class="achievement-icon">
+                      <img src="assets/images/icons/counter-icon3.svg" alt />
+                    </div>
+                    <div class="achievement-box-content">
+                      <h2>300+</h2>
+                      <h4>New Destinations</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="achievement-box-style-one">
+                    <div class="achievement-icon">
+                      <img src="assets/images/icons/counter-icon1.svg" alt />
+                    </div>
+                    <div class="achievement-box-content">
+                      <h2>05+</h2>
+                      <h4>Years Experience</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                  <div class="achievement-box-style-one">
+                    <div class="achievement-icon">
+                      <img src="assets/images/icons/counter-icon4.svg" alt />
+                    </div>
+                    <div class="achievement-box-content">
+                      <h2>150+</h2>
+                      <h4>Best Mountains</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newslatter end -->
+
+    <!-- holiday offer start -->
+    <div class="package-area package-style-one pt-110">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-head-alpha text-center mx-auto">
+              <h2>Select Your Ideal Hotel Room</h2>
+              <p>
+                Explore our exclusive selection of hotel rooms designed to offer
+                you the ultimate in comfort and luxury. Choose the perfect room
+                that suits your needs and preferences for an unforgettable stay.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="package-card-alpha">
+              <div class="package-thumb">
+                <a href="booknow.html"
+                  ><img
+                    src="assets/images/hotels/hotel2.jpg"
+                    alt="Deluxe Room with Sea View"
+                /></a>
+                <p class="card-label">
+                  <i class="bi bi-clock"></i> <span>5 Days & 6 Nights</span>
+                </p>
+              </div>
+              <div class="package-card-body">
+                <h3 class="p-card-title">
+                  <a href="booknow.html">Deluxe Room with Sea View</a>
+                </h3>
+                <div class="p-card-bottom">
+                  <div class="book-btn">
+                    <a href="booknow.html"
+                      >Book Now <i class="bx bxs-right-arrow-alt"></i
+                    ></a>
+                  </div>
+                  <div class="p-card-info">
+                    <span>From</span>
+                    <h6>7,900 INR <span>Per Night</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="package-card-alpha">
+              <div class="package-thumb">
+                <a href="booknow.html"
+                  ><img
+                    src="assets/images/hotels/room3.jpg"
+                    alt="Luxury Suite with Private Balcony"
+                /></a>
+                <p class="card-label">
+                  <i class="bi bi-clock"></i> <span>3 Days & 2 Nights</span>
+                </p>
+              </div>
+              <div class="package-card-body">
+                <h3 class="p-card-title">
+                  <a href="booknow.html">Luxury Suite with Private Balcony</a>
+                </h3>
+                <div class="p-card-bottom">
+                  <div class="book-btn">
+                    <a href="booknow.html"
+                      >Book Now <i class="bx bxs-right-arrow-alt"></i
+                    ></a>
+                  </div>
+                  <div class="p-card-info">
+                    <span>From</span>
+                    <h6>8,000 INR <span>Per Night</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="package-card-alpha">
+              <div class="package-thumb">
+                <a href="booknow.html"
+                  ><img
+                    src="assets/images/hotels/room1.jpg"
+                    alt="Classic Room with Garden View"
+                /></a>
+                <p class="card-label">
+                  <i class="bi bi-clock"></i> <span>4 Days & 3 Nights</span>
+                </p>
+              </div>
+              <div class="package-card-body">
+                <h3 class="p-card-title">
+                  <a href="booknow.html">Classic Room with Garden View</a>
+                </h3>
+                <div class="p-card-bottom">
+                  <div class="book-btn">
+                    <a href="booknow.html"
+                      >Book Now <i class="bx bxs-right-arrow-alt"></i
+                    ></a>
+                  </div>
+                  <div class="p-card-info">
+                    <span>From</span>
+                    <h6>8,500 INR <span>Per Night</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more room cards as needed, following the same structure -->
+        </div>
+        <div class="row text-center">
+          <!-- <div class="package-bottom-btn">
+            <a href="rooms.html" class="button-fill-primary">View All Rooms</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- holiday offer end -->
+
+    <div class="gallary-area gallary-style-one pt-110">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div
+              class="section-head-alpha section-padding-15 text-center mx-auto"
+            >
+              <h2>Travel Gallery</h2>
+              <p>
+                Explore the world through our curated collection of travel
+                memories. Each destination offers a unique glimpse into diverse
+                cultures, landscapes, and experiences. Journey with us and
+                discover the beauty that awaits around every corner.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="gallary-item">
+              <img
+                src="assets/images/indian pic/hawa-mahal-6156123_640.jpg"
+                alt="Image Gallery"
+                height="350px"
+              />
+              <a
+                class="gallary-item-overlay"
+                data-fancybox="gallery"
+                data-caption="Caption Here"
+                href="assets/images/indian pic/hawa-mahal-6156123_640.jpg"
+              >
+                <i class="bi bi-eye"></i>
+              </a>
+            </div>
+            <div class="gallary-item">
+              <img
+                src="assets/images/indian pic/istockphoto-1017900834-612x612.jpg"
+                alt="Image Gallery"
+                height="250px"
+              />
+              <a
+                class="gallary-item-overlay"
+                data-fancybox="gallery"
+                data-caption="Caption Here"
+                href="assets/images/indian pic/istockphoto-1017900834-612x612.jpg"
+              >
+                <i class="bi bi-eye"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="gallary-item">
+              <img
+                src="assets/images/indian pic/istockphoto-539018660-612x612.jpg"
+                alt="Image Gallery"
+                height="180px"
+              />
+              <a
+                class="gallary-item-overlay"
+                data-fancybox="gallery"
+                data-caption="Caption Here"
+                href="assets/images/indian pic/istockphoto-539018660-612x612.jpg"
+              >
+                <i class="bi bi-eye"></i>
+              </a>
+            </div>
+            <div class="gallary-item">
+              <img
+                src="assets/images/indian pic/taj-mahal-866692_640.jpg"
+                alt="Image Gallery"
+              />
+              <a
+                class="gallary-item-overlay"
+                data-fancybox="gallery"
+                data-caption="Caption Here"
+                href="assets/images/indian pic/taj-mahal-866692_640.jpg"
+              >
+                <i class="bi bi-eye"></i>
+              </a>
+            </div>
+            <div class="gallary-item">
+              <img
+                src="assets/images/indian pic/istockphoto-938975958-612x612.jpg"
+                alt="Image Gallery"
+                height="160px"
+              />
+              <a
+                class="gallary-item-overlay"
+                data-fancybox="gallery"
+                data-caption="Caption Here"
+                href="assets/images/indian pic/istockphoto-938975958-612x612.jpg"
+              >
+                <i class="bi bi-eye"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="gallary-item">
+              <img
+                src="assets/images/indian pic/istockphoto-154894958-612x612.jpg"
+                alt="Image Gallery"
+                height="350px"
+              />
+              <a
+                class="gallary-item-overlay"
+                data-fancybox="gallery"
+                data-caption="Caption Here"
+                href="assets/images/indian pic/istockphoto-154894958-612x612.jpg"
+              >
+                <i class="bi bi-eye"></i>
+              </a>
+            </div>
+            <div class="gallary-item">
+              <img
+                src="assets/images/indian pic/istockphoto-2154433338-612x612.jpg"
+                alt="Image Gallery"
+                height="250px"
+              />
+              <a
+                class="gallary-item-overlay"
+                data-fancybox="gallery"
+                data-caption="Caption Here"
+                href="assets/images/indian pic/istockphoto-2154433338-612x612.jpg"
+              >
+                <i class="bi bi-eye"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testmonial  start  -->
+    <div class="testimonial-area testimonial-style-one mt-120">
+      <div class="testimonial-shape-group"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="section-head-alpha">
+              <h2>What Our Clients Say About Paryatak.club</h2>
+              <p>
+                At Paryatak.club, we take pride in creating unforgettable travel
+                experiences. Here’s what our travelers have to say about their
+                journeys with us.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div
+              class="slider-arrows text-center d-lg-flex d-none justify-content-end mb-3"
+            >
+              <div
+                class="testi-prev custom-swiper-prev"
+                tabindex="0"
+                role="button"
+                aria-label="Previous slide"
+              >
+                <i class="bi bi-chevron-left"></i>
+              </div>
+              <div
+                class="testi-next custom-swiper-next"
+                tabindex="0"
+                role="button"
+                aria-label="Next slide"
+              >
+                <i class="bi bi-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper testimonial-slider-one position-relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card testimonial-card-alpha">
+                <!-- <div class="testimonial-overlay-img">
+                            <img src="assets/images/reviewer/r-sm1.png" alt="Client Image">
+                        </div> -->
+                <div class="testimonial-card-top">
+                  <div class="qoute-icon">
+                    <i class="bx bxs-quote-left"></i>
+                  </div>
+                  <div class="testimonial-thumb">
+                    <img
+                      src="assets/images/reviewer/r-sm1.png"
+                      alt="Reviewer Image"
+                    />
+                  </div>
+                  <h3 class="testimonial-count">01</h3>
+                </div>
+                <div class="testimonial-body">
+                  <p>
+                    Paryatak.club planned everything. It was a stress-free
+                    experience from start to finish.
+                  </p>
+                  <div class="testimonial-bottom">
+                    <div class="reviewer-info">
+                      <h4 class="reviewer-name">Arjun Mehta</h4>
+                      <h6>Traveller</h6>
+                    </div>
+                    <ul class="testimonial-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card testimonial-card-alpha">
+                <!-- <div class="testimonial-overlay-img">
+                            <img src="assets/images/reviewer/reviewer-1.png" alt="Client Image">
+                        </div> -->
+                <div class="testimonial-card-top">
+                  <div class="qoute-icon">
+                    <i class="bx bxs-quote-left"></i>
+                  </div>
+                  <div class="testimonial-thumb">
+                    <img
+                      src="assets/images/reviewer/r-sm2.png"
+                      alt="Reviewer Image"
+                    />
+                  </div>
+                  <h3 class="testimonial-count">02</h3>
+                </div>
+                <div class="testimonial-body">
+                  <p>
+                    They understood our needs and curated a fantastic itinerary.
+                    Highly recommended!
+                  </p>
+                  <div class="testimonial-bottom">
+                    <div class="reviewer-info">
+                      <h4 class="reviewer-name">Priyansh Nair</h4>
+                      <h6>Traveller</h6>
+                    </div>
+                    <ul class="testimonial-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonial-card testimonial-card-alpha">
+                <!-- <div class="testimonial-overlay-img">
+                            <img src="assets/images/reviewer/reviewer-1.png" alt="Client Image">
+                        </div> -->
+                <div class="testimonial-card-top">
+                  <div class="qoute-icon">
+                    <i class="bx bxs-quote-left"></i>
+                  </div>
+                  <div class="testimonial-thumb">
+                    <img
+                      src="assets/images/reviewer/r-sm3.png"
+                      alt="Reviewer Image"
+                    />
+                  </div>
+                  <h3 class="testimonial-count">03</h3>
+                </div>
+                <div class="testimonial-body">
+                  <p>
+                    A seamless travel experience. Paryatak.club made our trip
+                    unforgettable.
+                  </p>
+                  <div class="testimonial-bottom">
+                    <div class="reviewer-info">
+                      <h4 class="reviewer-name">Priya Sharma</h4>
+                      <h6>Traveller</h6>
+                    </div>
+                    <ul class="testimonial-rating">
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                      <li><i class="bi bi-star-fill"></i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testmonial  end  -->
+    <!-- guide start -->
+    <div class="guide-area guide-style-one pt-110">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-head-alpha text-center mx-auto">
+              <h2>Meet Our Expert Guides</h2>
+              <p>
+                At Paryatak.club, our guides are passionate about sharing their
+                deep knowledge and love for travel. They ensure every journey is
+                filled with unforgettable memories.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="guide-card-alpha">
+              <div class="guide-image">
+                <img
+                  src="assets/images/guide/guide-md3.png"
+                  alt="Guide Image"
+                />
+                <ul class="guide-social-links">
+                  <li>
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="bx bxl-whatsapp"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="guide-content">
+                <h4 class="guide-name">Ravi Verma</h4>
+                <h6 class="guide-designation">Tour Guide</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="guide-card-alpha">
+              <div class="guide-image">
+                <img src="assets/images/guide/guide-m2.png" alt="Guide Image" />
+                <ul class="guide-social-links">
+                  <li>
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="bx bxl-whatsapp"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="guide-content">
+                <h4 class="guide-name">Aditi Sharma</h4>
+                <h6 class="guide-designation">Tour Guide</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="guide-card-alpha">
+              <div class="guide-image">
+                <img
+                  src="assets/images/reviewer/reviewer-1.png"
+                  alt="Guide Image"
+                  height="270px"
+                />
+                <ul class="guide-social-links">
+                  <li>
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="bx bxl-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="bx bxl-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="bx bxl-whatsapp"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="guide-content">
+                <h4 class="guide-name">Raj Patel</h4>
+                <h6 class="guide-designation">Tour Guide</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- guide end -->
+
+    <!-- blog start -->
+    <div class="blog-area blog-style-one pt-110">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-head-alpha text-center mx-auto">
+              <h2>Latest Travel Stories</h2>
+              <p>
+                Stay updated with the latest travel trends, tips, and stories
+                curated by our expert team at Paryatak.club. Discover your next
+                adventure with us.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-card-alpha">
+              <div class="blog-thumb">
+                <a href="index.html">
+                  <img
+                    src="assets/images/indian pic/istockphoto-2154433338-612x612.jpg"
+                    alt="Travel Blog Image 1"
+                  />
+                </a>
+                <div class="blog-lavel">
+                  <a href="#"
+                    ><i class="bi bi-calendar3"></i> August 12, 2024</a
+                  >
+                </div>
+              </div>
+              <div class="blog-content">
+                <div class="blog-body-top">
+                  <a href="#" class="blog-writer"
+                    ><i class="bi bi-person-circle"></i> By Aditi Singh</a
+                  >
+                  <a href="#" class="blog-comments"
+                    ><i class="bi bi-chat-dots-fill"></i> Comment (12)</a
+                  >
+                </div>
+                <h4 class="blog-title">
+                  <a href="index.html"
+                    >Exploring the Unseen Wonders of the Himalayas</a
+                  >
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-card-alpha">
+              <div class="blog-thumb">
+                <a href="index.html">
+                  <img
+                    src="assets/images/indian pic/istockphoto-1031430214-612x612.jpg"
+                    alt="Travel Blog Image 2"
+                    height="200px"
+                  />
+                </a>
+                <div class="blog-lavel">
+                  <a href="#"
+                    ><i class="bi bi-calendar3"></i> August 10, 2024</a
+                  >
+                </div>
+              </div>
+              <div class="blog-content">
+                <div class="blog-body-top">
+                  <a href="#" class="blog-writer"
+                    ><i class="bi bi-person-circle"></i> By Raj Patel</a
+                  >
+                  <a href="#" class="blog-comments"
+                    ><i class="bi bi-chat-dots-fill"></i> Comment (08)</a
+                  >
+                </div>
+                <h4 class="blog-title">
+                  <a href="index.html"
+                    >Top 5 Beach Destinations in South India</a
+                  >
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-card-alpha">
+              <div class="blog-thumb">
+                <a href="index.html">
+                  <img
+                    src="assets/images/indian pic/istockphoto-2161510610-612x612.jpg"
+                    alt="Travel Blog Image 3"
+                    height="200px"
+                  />
+                </a>
+                <div class="blog-lavel">
+                  <a href="#"><i class="bi bi-calendar3"></i> August 8, 2024</a>
+                </div>
+              </div>
+              <div class="blog-content">
+                <div class="blog-body-top">
+                  <a href="#" class="blog-writer"
+                    ><i class="bi bi-person-circle"></i> By Neha Verma</a
+                  >
+                  <a href="#" class="blog-comments"
+                    ><i class="bi bi-chat-dots-fill"></i> Comment (10)</a
+                  >
+                </div>
+                <h4 class="blog-title">
+                  <a href="index.html">A Culinary Journey Through Rajasthan</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- blog end -->
+
+    <!-- Social icons -->
+    <div class="icon-container">
+      <div class="icon whatsapp">
+        <a
+          href="https://api.whatsapp.com/send?phone=+919555695021&text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+          target="_blank"
+        >
+          <img src="/assets/images/indian pic/whatsapp.png" alt="WhatsApp" />
+        </a>
+      </div>
+
+      <div class="icon instagram">
+        <a
+          href="https://www.instagram.com/paryatak.club?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ=="
+          target="_blank"
+        >
+          <img src="/assets/images/indian pic/instagram.png" alt="Instagram" />
+        </a>
+      </div>
+
+      <div class="icon pbmit-call-text">
+        <a href="tel:+91 9555695021" target="_blank">
+          <img src="/assets/images/indian pic/telephone.png" alt="telephone" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Social icons -->
+
+    <!-- Footer  start-->
+    <div class="footer-area mt-110">
+      <div class="footer-main-wrapper">
+        <div class="footer-vactor">
+          <img src="assets/images/banner/footer-bg.png" alt />
+        </div>
+        <div class="container">
+          <div class="row justify-content-center g-4">
+            <div class="col-lg-4">
+              <div class="footer-about text-lg-start text-center">
+                <p>
+                  Explore the world with Paryatak.club, where every journey is
+                  crafted with care. Discover unique destinations and create
+                  unforgettable memories.
+                </p>
+
+                <div class="footer-social-wrap">
+                  <h5>Follow Us On:</h5>
+                  <ul
+                    class="footer-social-links justify-content-lg-start justify-content-center"
+                  >
+                    <li>
+                      <a
+                        href="https://www.instagram.com/paryatak.club?utm_source=qr&igsh=MXdtOGNqdmExMGF2bQ=="
+                        target="_blank"
+                        ><i class="bx bxl-instagram"></i
+                      ></a>
+                    </li>
+                    <!-- <li><a href="#"><i class="bx bxl-facebook"></i></a></li> -->
+                    <li>
+                      <a
+                        href="https://www.youtube.com/@Paryatak.Club01"
+                        target="_blank"
+                        ><i class="bx bxl-youtube"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100095075004330&mibextid=JRoKGi"
+                        target="_blank"
+                        ><i class="bx bxl-facebook"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="https://wa.me/919555695021"
+                        ><i class="bx bxl-whatsapp"></i
+                      ></a>
+                    </li>
+                    <!-- <li><a href="#"><i class="bx bxl-pinterest-alt"></i></a></li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <div class="footer-widget">
+                <h4 class="footer-widget-title">Quick Link</h4>
+                <ul class="footer-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="destination.html">Services</a></li>
+                  <li><a href="package.html">Travel Plan</a></li>
+                  <li><a href="package-standard.html">Offers</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <!-- <li><a href="blog.html">Blog</a></li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4">
+              <div class="footer-widget">
+                <h4 class="footer-widget-title">Tour Type</h4>
+                <ul class="footer-links">
+                  <li><a href="#">Wild & Adventure Tours</a></li>
+                  <li><a href="#">Group Tour</a></li>
+                  <li><a href="#">Seasonal Tours</a></li>
+                  <li><a href="#">Relaxation Tours</a></li>
+                  <li><a href="#">Family Friendly Tours</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-8">
+              <div class="footer-widget">
+                <h4 class="footer-widget-title text-center">Gallery</h4>
+                <div class="footer-gallary-grid">
+                  <div class="footer-gallary-item">
+                    <a
+                      href="assets/images/gallary/fg-1.png"
+                      data-fancybox="footer"
+                      data-caption="Caption Here"
+                      ><img src="assets/images/gallary/fg-1.png" alt
+                    /></a>
+                  </div>
+                  <div class="footer-gallary-item">
+                    <a
+                      href="assets/images/gallary/fg-2.png"
+                      data-fancybox="footer"
+                      data-caption="Caption Here"
+                      ><img src="assets/images/gallary/fg-2.png" alt
+                    /></a>
+                  </div>
+                  <div class="footer-gallary-item">
+                    <a
+                      href="assets/images/gallary/fg-3.png"
+                      data-fancybox="footer"
+                      data-caption="Caption Here"
+                      ><img src="assets/images/gallary/fg-3.png" alt
+                    /></a>
+                  </div>
+                  <div class="footer-gallary-item">
+                    <a
+                      href="assets/images/gallary/fg-4.png"
+                      data-fancybox="footer"
+                      data-caption="Caption Here"
+                      ><img src="assets/images/gallary/fg-4.png" alt
+                    /></a>
+                  </div>
+                  <div class="footer-gallary-item">
+                    <a
+                      href="assets/images/gallary/fg-5.png"
+                      data-fancybox="footer"
+                      data-caption="Caption Here"
+                      ><img src="assets/images/gallary/fg-5.png" alt
+                    /></a>
+                  </div>
+                  <div class="footer-gallary-item">
+                    <a
+                      href="assets/images/gallary/fg-6.png"
+                      data-fancybox="footer"
+                      data-caption="Caption Here"
+                      ><img src="assets/images/gallary/fg-6.png" alt
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-contact-wrapper">
+            <h5>Contact Us:</h5>
+            <ul class="footer-contact-list">
+              <li>
+                <i class="bi bi-telephone-x"></i>
+                <a href="tel:+17632275032">+91 9555695021</a>
+              </li>
+              <li>
+                <i class="bi bi-envelope-open"></i>
+                <a
+                  href="https://demo.egenslab.com/cdn-cgi/l/email-protection#d3babdb5bc93a7bca6a1aba3a1bcfdb0bcbe"
+                  ><span
+                    class="__cf_email__"
+                    data-cfemail="c9a0a7afa689bda6bcbbb1b9bba6e7aaa6a4"
+                    >bookingparyatak@gmail.com</span
+                  ></a
+                >
+              </li>
+              <li>
+                <i class="bi bi-geo-alt"></i>
+                <a href="contact.html"
+                  >Karanda, Karanda Ghazipur - Uttar Pradesh - India (233224)</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-4 col-md-6 order-lg-1 order-3">
+              <div class="copyright-link text-lg-start text-center">
+                <p>Copyright 2024 | Design By <a href="#"> paryatak.club</a></p>
+              </div>
+            </div>
+            <div class="col-lg-4 order-lg-2 order-1">
+              <div class="footer-logo text-center">
+                <a href="index.html"
+                  ><img
+                    src="assets/images/WhatsApp_Image_2024-08-10_at_1.38.43_PM-removebg-preview.png"
+                    alt
+                    height="90px"
+                /></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 order-lg-3 order-2">
+              <div class="policy-links">
+                <ul
+                  class="policy-list justify-content-lg-end justify-content-center"
+                >
+                  <li><a href="#">Terms & Condition</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer  end-->
+
+    <script
+      data-cfasync="false"
+      src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/chain_fade.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+
+  <!-- Mirrored from demo.egenslab.com/html/tourxpro/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Aug 2024 09:09:26 GMT -->
+</html>
